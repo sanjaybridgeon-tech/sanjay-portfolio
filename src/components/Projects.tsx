@@ -7,7 +7,15 @@ const projects = [
     title: "Car Accessories Web Application",
     desc: "A full stack web application with React for the frontend and Java for backend services. Implemented RESTful APIs to handle product data, search, and category management with SQL data storage.",
     tech: ["React", "Java", "SQL", "REST APIs"],
-    link: "https://github.com/sanjaybridgeon-tech"
+    link: "https://github.com/sanjaybridgeon-tech",
+    liveUrl: null
+  },
+  {
+    title: "Sarax — Live Web Project",
+    desc: "A production-ready web application deployed live on Vercel. Built with a modern frontend stack, demonstrating real-world deployment, performance optimization, and responsive design.",
+    tech: ["React", "Next.js", "Vercel"],
+    link: null,
+    liveUrl: "https://saraxnew.vercel.app/"
   }
 ];
 
@@ -27,10 +35,19 @@ export default function Projects() {
                 <span key={i} className={styles.tag}>{t}</span>
               ))}
             </div>
-            <a href={project.link} target="_blank" className={styles.secondaryBtn} 
-               style={{ alignSelf: 'flex-start', marginTop: 'auto' }}>
-              View Project ↗
-            </a>
+            <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginTop: 'auto' }}>
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.secondaryBtn}>
+                  GitHub ↗
+                </a>
+              )}
+              {project.liveUrl && (
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.cta}
+                   style={{ borderRadius: '30px' }}>
+                  Live Demo ↗
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </div>
