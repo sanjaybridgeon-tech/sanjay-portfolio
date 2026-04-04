@@ -3,7 +3,7 @@ import styles from './components.module.css';
 import useReveal from '../hooks/useReveal';
 
 const techSkills = [
-  "Java", "React", "Redux", "C Programming", 
+  "Java", "Spring Boot", "React", "Redux", "C Programming", 
   "SQL", "REST APIs", "HTML", "CSS", 
   "Git", "JavaScript"
 ];
