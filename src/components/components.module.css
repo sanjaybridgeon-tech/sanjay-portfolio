@@ -12,7 +12,6 @@
   background: rgba(18, 25, 20, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
   transition: var(--transition-smooth);
 }
 
