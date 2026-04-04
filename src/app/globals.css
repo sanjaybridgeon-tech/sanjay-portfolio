@@ -62,6 +62,18 @@ section {
   margin: 0 auto;
 }
 
+@media (max-width: 968px) {
+  section {
+    padding: 100px 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 80px 20px;
+  }
+}
+
 /* Minimalist Card Utility (No Box) */
 .glass-card {
   background: transparent;

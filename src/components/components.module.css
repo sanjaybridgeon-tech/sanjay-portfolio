@@ -469,21 +469,166 @@
   align-items: flex-start;
 }
 
-/* Responsive fixes */
+/* ==========================================
+   RESPONSIVE / MOBILE OPTIMIZATION
+   ========================================== */
+
+/* Tablet (max 968px) */
 @media (max-width: 968px) {
+  .header {
+    padding: 0 30px;
+  }
+
+  .navLinks {
+    gap: 16px;
+  }
+
+  .navLink {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+
   .heroGrid {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 50px;
+  }
+
+  .heroGrid > div:first-child { order: 2; }
+  .heroGrid > div:last-child  { order: 1; }
+
+  .heroDesc {
+    max-width: 100%;
+  }
+
+  .profileWrapper {
+    max-width: 300px;
+  }
+
+  .contactGrid,
+  .aboutGrid {
+    grid-template-columns: 1fr;
     gap: 40px;
   }
-  .heroGrid > div:first-child {
-    order: 2;
-  }
-  .heroGrid > div:last-child {
-    order: 1;
-  }
-  .contactGrid, .aboutGrid {
+
+  .grid {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 40px;
+  }
+
+  .boxedCard {
+    padding: 40px;
+  }
+
+  .card {
+    padding: 30px;
+  }
+}
+
+/* Mobile (max 640px) */
+@media (max-width: 640px) {
+  .header {
+    padding: 0 20px;
+    height: 65px;
+  }
+
+  /* Hide full nav on very small screens, show condensed */
+  .navLinks {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .navLink {
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+  }
+
+  .hero {
+    padding: 100px 0 60px;
+    min-height: 100svh;
+  }
+
+  .heroGrid {
+    gap: 30px;
+  }
+
+  .profileWrapper {
+    max-width: 220px;
+  }
+
+  .heroDesc {
+    font-size: 0.95rem;
+  }
+
+  .heroSub {
+    font-size: 1rem;
+  }
+
+  /* Keep shatter title looking good on mobile */
+  .neonTitle {
+    -webkit-text-stroke: 1.5px var(--accent);
+    transform: none; /* remove skew on small screens */
+  }
+
+  .boxedCard {
+    padding: 24px;
+  }
+
+  .card {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .cardTitle {
+    font-size: 1.8rem;
+  }
+
+  .cardMeta {
+    font-size: 1rem;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+  }
+
+  .skillItem {
+    padding: 24px 12px;
+    font-size: 0.9rem;
+    min-height: 90px;
+  }
+
+  .contactGrid {
+    gap: 30px;
+  }
+
+  .contactInfo {
+    gap: 24px;
+  }
+
+  .cta,
+  .secondaryBtn {
+    padding: 12px 24px;
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .submitBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .socialBar {
+    flex-direction: column;
+  }
+
+  .socialBtn {
+    text-align: center;
+  }
+
+  .grid {
+    gap: 24px;
   }
 }
