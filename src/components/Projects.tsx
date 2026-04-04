@@ -8,13 +8,6 @@ const projects = [
     desc: "A full stack web application with React for the frontend and Java for backend services. Implemented RESTful APIs to handle product data, search, and category management with SQL data storage.",
     tech: ["React", "Java", "SQL", "REST APIs"],
     link: "https://github.com/sanjaybridgeon-tech",
-    liveUrl: null
-  },
-  {
-    title: "Sarax — Live Web Project",
-    desc: "A production-ready web application deployed live on Vercel. Built with a modern frontend stack, demonstrating real-world deployment, performance optimization, and responsive design.",
-    tech: ["React", "Next.js", "Vercel"],
-    link: null,
     liveUrl: "https://saraxnew.vercel.app/"
   }
 ];
