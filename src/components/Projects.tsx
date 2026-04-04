@@ -2,15 +2,7 @@
 import styles from './components.module.css';
 import useReveal from '../hooks/useReveal';
 
-const projects = [
-  {
-    title: "Car Accessories Web Application",
-    desc: "A full stack web application with React for the frontend and Java for backend services. Implemented RESTful APIs to handle product data, search, and category management with SQL data storage.",
-    tech: ["React", "Java", "SQL", "REST APIs"],
-    link: "https://github.com/sanjaybridgeon-tech",
-    liveUrl: "https://saraxnew.vercel.app/"
-  }
-];
+const projects: { title: string; desc: string; tech: string[]; link: string | null; liveUrl: string | null }[] = [];
 
 export default function Projects() {
   const revealRef = useReveal();
